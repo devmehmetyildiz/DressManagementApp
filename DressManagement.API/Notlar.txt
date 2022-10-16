@@ -1,0 +1,4 @@
+﻿
+/////////////// TODOS /////////////////
+
+Authory Repository table adları düzeltilecek 
