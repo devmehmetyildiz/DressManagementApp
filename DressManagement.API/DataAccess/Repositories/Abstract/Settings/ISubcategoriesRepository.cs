@@ -8,6 +8,7 @@ namespace DressManagement.API.DataAccess.Repositories.Abstract.Settings
 {
     public interface ISubcategoriesRepository : IRepository<SubcategoriesModel>
     {
+        List<SubcategoriesModel> GetByGuids(List<string> guids);
 
     }
 }

@@ -8,6 +8,6 @@ namespace DressManagement.API.DataAccess.Repositories.Abstract.Settings
 {
     public interface ICategoriesRepository : IRepository<CategoriesModel>
     {
-
+       
     }
 }

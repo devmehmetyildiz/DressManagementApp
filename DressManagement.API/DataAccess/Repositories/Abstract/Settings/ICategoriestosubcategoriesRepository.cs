@@ -8,6 +8,6 @@ namespace DressManagement.API.DataAccess.Repositories.Abstract.Settings
 {
     public interface ICategoriestosubcategoriesRepository : IRepository<CategoriestosubcategoriesModel>
     {
-
+        void RemovebyGuids(List<CategoriestosubcategoriesModel> list);
     }
 }

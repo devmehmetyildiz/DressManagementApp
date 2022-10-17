@@ -16,5 +16,13 @@ namespace DressManagement.API.DataAccess.Repositories.Concrete.Settings
         {
             _dbSet = dbcontext.Set<CategoriestosubcategoriesModel>();
         }
+
+        public void RemovebyGuids(List<CategoriestosubcategoriesModel> list)
+        {
+            foreach (var item in list)
+            {
+                _dbSet.Remove(item);
+            }
+        }
     }
 }

@@ -16,5 +16,23 @@ namespace DressManagement.API.DataAccess.Repositories.Concrete.Settings
         {
             _dbSet = dbcontext.Set<SubcategoriesModel>();
         }
+
+        public List<SubcategoriesModel> GetByGuids(List<string> guids)
+        {
+            if (guids.Count == 0)
+            {
+                return new List<SubcategoriesModel>();
+            }
+            string query = "";
+            query += "select * from subcategories  where ConcurrencyStamp IN (";
+            for (int i = 0; i < guids.Count; i++)
+            {
+                query += $"'{guids[i]}'";
+                if (i != guids.Count - 1)
+                    query += ",";
+            }
+            query += ")";
+            return _dbSet.FromSqlRaw(query).ToList();
+        }
     }
 }
