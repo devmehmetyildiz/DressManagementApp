@@ -24,13 +24,13 @@ namespace DressManagement.API.DataAccess.Repositories.Concrete.Auth
 
         public void AddRolestoUser(UsertoRoleModel model)
         {
-            string query = $"INSERT INTO usertoroles (`UserID`, `RoleID`) VALUES ('{model.UserID}','{model.RoleID}')";
+            string query = $"INSERT INTO UsertoRoles (UserID, RoleID) VALUES ('{model.UserID}','{model.RoleID}')";
             var result = dbcontext.Database.ExecuteSqlRaw(query);
         }
 
         public void RemoveRolefromUser(string UserID)
         {
-            string query = $"DELETE FROM `usertoroles` WHERE `UserID` = '{UserID}'";
+            string query = $"DELETE FROM UsertoRoles WHERE UserID = '{UserID}'";
             var result = dbcontext.Database.ExecuteSqlRaw(query);
         }
     }

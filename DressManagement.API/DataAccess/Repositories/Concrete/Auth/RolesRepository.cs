@@ -29,7 +29,7 @@ namespace DressManagement.API.DataAccess.Repositories.Concrete.Auth
                 return new List<RoleModel>();
             }
             string query = "";
-            query += "select * from roles  where ConcurrencyStamp IN (";
+            query += "select * from Roles  where ConcurrencyStamp IN (";
             for (int i = 0; i < roles.Count; i++)
             {
                 query += $"'{roles[i]}'";

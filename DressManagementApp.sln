@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32901.82
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DressManagement.API", "DressManagement.API\DressManagement.API.csproj", "{090BCA24-9720-4DA5-81D0-C5B8BBB56BDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DressManagement.API", "DressManagement.API\DressManagement.API.csproj", "{090BCA24-9720-4DA5-81D0-C5B8BBB56BDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DressManagement.WPF", "DressManagement.WPF\DressManagement.WPF.csproj", "{07622685-CED9-4423-B9DA-B0E1D3852057}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{090BCA24-9720-4DA5-81D0-C5B8BBB56BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{090BCA24-9720-4DA5-81D0-C5B8BBB56BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{090BCA24-9720-4DA5-81D0-C5B8BBB56BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07622685-CED9-4423-B9DA-B0E1D3852057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07622685-CED9-4423-B9DA-B0E1D3852057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07622685-CED9-4423-B9DA-B0E1D3852057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07622685-CED9-4423-B9DA-B0E1D3852057}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

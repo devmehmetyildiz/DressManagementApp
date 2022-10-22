@@ -34,7 +34,7 @@ namespace DressManagement.API.DataAccess.Repositories.Concrete.Auth
                 return new List<AuthoryModel>();
             }
             string query = "";
-            query += "select * from authories  where ConcurrencyStamp IN (";
+            query += "select * from Authories  where ConcurrencyStamp IN (";
             for (int i = 0; i < authoryguids.Count; i++)
             {
                 query += $"'{authoryguids[i]}'";
@@ -48,12 +48,12 @@ namespace DressManagement.API.DataAccess.Repositories.Concrete.Auth
         public bool CheckAuthByUsername(string username, string authoryname)
         {
             string query = "";
-            query += "select authories.* from authories ";
-            query += "left join roletoauthories on authories.ConcurrencyStamp = roletoauthories.AuthoryID ";
-            query += "left join roles on roles.ConcurrencyStamp = roletoauthories.RoleID ";
-            query += "left join usertoroles on usertoroles.RoleID  = roles.ConcurrencyStamp ";
-            query += "left join users on users.ConcurrencyStamp = usertoroles.UserID ";
-            query += $"where users.Username = '{username}' and authories.Name = '{authoryname}'";
+            query += "select Authories.* from Authories ";
+            query += "left join RoletoAuthories on Authories.ConcurrencyStamp = RoletoAuthories.AuthoryID ";
+            query += "left join Roles on Roles.ConcurrencyStamp = RoletoAuthories.RoleID ";
+            query += "left join UsertoRoles on UsertoRoles.RoleID  = Roles.ConcurrencyStamp ";
+            query += "left join Users on users.ConcurrencyStamp = UsertoRoles.UserID ";
+            query += $"where Users.Username = '{username}' and Authories.Name = '{authoryname}'";
 
             var Response = dbcontext.Authories.FromSqlRaw(query).ToList();
             if (Response.Count == 0)

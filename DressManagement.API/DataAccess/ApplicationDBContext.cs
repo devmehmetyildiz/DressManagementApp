@@ -26,11 +26,11 @@ namespace DressManagement.API.DataAccess
         #endregion
 
         #region Business
-        public DbSet<MovementModel> Movements { get; set; }
-        public DbSet<ProductModel> Products { get; set; }
-        public DbSet<PurchaseModel> Purchases { get; set; }
-        public DbSet<SalesModel> Sales { get; set; }
-        public DbSet<StockModel> Stocks { get; set; }
+        //public DbSet<MovementModel> Movements { get; set; }
+        //public DbSet<ProductModel> Products { get; set; }
+        //public DbSet<PurchaseModel> Purchases { get; set; }
+        //public DbSet<SalesModel> Sales { get; set; }
+        //public DbSet<StockModel> Stocks { get; set; }
         #endregion
 
         #region Settings

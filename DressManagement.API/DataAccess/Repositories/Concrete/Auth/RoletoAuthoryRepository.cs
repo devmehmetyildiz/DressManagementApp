@@ -19,7 +19,7 @@ namespace DressManagement.API.DataAccess.Repositories.Concrete.Auth
 
         public void AddAuthorytoRole(RoletoAuthoryModel model)
         {
-            string query = $"INSERT INTO roletoauthories (`RoleID`, `AuthoryID`) VALUES ('{model.RoleID}','{model.AuthoryID}')";
+            string query = $"INSERT INTO RoletoAuthories (`RoleID`, `AuthoryID`) VALUES ('{model.RoleID}','{model.AuthoryID}')";
             var result = dbcontext.Database.ExecuteSqlRaw(query);
         }
 
@@ -32,7 +32,7 @@ namespace DressManagement.API.DataAccess.Repositories.Concrete.Auth
 
         public void DeleteAuthoriesbyRole(string RoleGuid)
         {
-            string query = $"DELETE FROM roletoauthories WHERE `RoleID` = '{RoleGuid}'";
+            string query = $"DELETE FROM RoletoAuthories WHERE `RoleID` = '{RoleGuid}'";
             var result = dbcontext.Database.ExecuteSqlRaw(query);
         }
     }

@@ -17,3 +17,4 @@ namespace DressManagement.API.DataAccess.Repositories.Concrete.Settings
             _dbSet = dbcontext.Set<BodysizeModel>();
         }
     }
+}
